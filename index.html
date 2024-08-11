@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Frame Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+        }
+        #frames-container {
+            margin-top: 30px;
+        }
+        .frame-img {
+            width: 200px;
+            margin: 5px;
+        }
+        #download-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #download-btn:disabled {
+            background-color: #888;
+        }
+        /* Progress bar styles */
+        #progress-container {
+            display: none;
+            margin: 20px 0;
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 25px;
+        }
+        #progress-bar {
+            width: 0%;
+            height: 30px;
+            background-color: #4CAF50;
+            border-radius: 25px;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Upload Video to Extract Frames</h1>
+
+    <input type="file" id="video-upload" accept="video/*">
+
+    <!-- Progress bar and percentage -->
+    <div id="progress-container">
+        <div id="progress-bar">0%</div>
+    </div>
+
+    <div id="frames-container"></div>
+    <button id="download-btn" disabled>Download Frames as Zip</button>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.10.1/dist/ffmpeg.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="coi-serviceworker.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
