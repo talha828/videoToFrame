@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9828984605556741"
+     crossorigin="anonymous"></script>
     <title>Video Frame Extractor</title>
 </head>
 <body>
+    <div class="space-div"></div>
+    <div class="space-div"></div>
+    <div class="main-screen">
+        <div class="main-title" style="display: flex; align-items: center; justify-content: center; ">
+            <img src="assets/thunder.png" width="5%" style="margin-right: 10px;">
+            <h1 class="main-heading" style="margin: 0;">Extract Modifier</h1>
+        </div>
+        
+        <div class="space-div"></div>
+    
+        <div class="upload-input">
+            <input type="file" class="upload-button" id="video-upload" accept="video/*" hidden/>
+            <label for="video-upload" class="video-upload">Upload Video</label>
+        </div>
+    
+        <div class="space-div-2"></div>
 
-    <h1>Upload Video to Extract Frames</h1>
+        <div class="info-container">
+            <div class="alret-info" style="display: flex; align-items: center; justify-content: center;" >
+                <div class="main-info"><span style="color: red; font-weight:600;">Important Note</span> : This website use your device resources like CPU, Ram and etc to do a job. For most effective results use 1 mint video or use video size according to your device capacity</div>
+            </div>
+            <div class="space-div"></div>
+            <div class="tile" style="display: flex; align-items: center; justify-content: center; ">
+                <img src="assets/thunder.png" width="20px" style="margin-right: 10px;">
+                <div class="heading">Extract unlimited frames effortlessly with zero ristriction</div>
+            </div>
+            <div class="space-div"></div>
+            <div class="tile" style="display: flex; align-items: center; justify-content: center; ">
+                <img src="assets/thunder.png" width="20px" style="margin-right: 10px;">
+                <div class="heading">Completely free to use and open-source github project.</div>
+            </div>
+            <div class="space-div"></div>
+            <div class="tile" style="display: flex; align-items: center; justify-content: center; ">
+                <img src="assets/thunder.png" width="20px" style="margin-right: 10px;">
+                <div class="heading">For  feedback https://github.com/talha828/videoToFrame</div>
+        </div>
 
-    <input type="file" id="video-upload" accept="video/*">
+    </div>
+        <div class="loader-wrapper" id="loader-wrapper" hidden>
+            <div class="loader"></div>
+            <div id="loop-count">0</div>
+        </div>
+    
+    
 
-    <!-- Progress bar and percentage -->
-    <div id="progress-container">
-        <div id="progress-bar">0%</div>
+        <div class="space-div-3"></div>
+
+        <div id="frames-container"></div>
+            <button id="download-btn" disabled hidden>Download Frames as Zip</button>
+    </div>
+    
+    <div class="footer"style="display: flex; align-items: center; justify-content: center;">
+        <a href="https://www.linkedin.com/in/talha-iqbal-flutter-developer/">@Linkedin</a>
+        <div class="vertical-space"></div>
+        <a href="https://github.com/talha828">@Github</a>
+        <div class="vertical-space"></div>
+        <a href="https://github.com/talha828/videoToFrame">@feedback</a>
     </div>
 
-    <div id="frames-container"></div>
-    <button id="download-btn" disabled>Download Frames as Zip</button>
+
     <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.10.1/dist/ffmpeg.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
     <script src="coi-serviceworker.js"></script>

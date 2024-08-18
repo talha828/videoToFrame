@@ -1,44 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    background-color: #EEECEC;
+    font-family:  "Mulish" ,Arial, sans-serif;
     text-align: center;
-    margin: 50px;
+    display: flex;
+    justify-content: center; /* Aligns horizontally */
+    align-items: center; /* Aligns vertically */
+    height: 90vh; /* Sets body height to 100% of the viewport height */
+    margin: 0; /* Removes default margin */
+    flex-direction: column;
 }
-input[type="file"] {
-    margin: 20px 0;
+
+.main-screen{
+    background-color: white;
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
 }
-#frames-container {
-    margin-top: 30px;
+
+.main-heading{
+    margin-bottom: 5%;
 }
-.frame-img {
-    width: 200px;
-    margin: 5px;
+
+.space-div{
+    height: 50px;
 }
-#download-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+
+.space-div-2{
+    height: 50px;
+}
+.space-div-3{
+    height: 50px;
+}
+.vertical-space{
+    width: 50px;
+}
+.video-upload{
+    display: block;
+    background-color: #A479DA;
     border: none;
+    font-weight: 600;
+    color: white;
+    padding: 12px 32px;
+    text-decoration: none;
     cursor: pointer;
+    border-radius: 10px;
 }
+
+.info-container{
+    background-color: #f6f2fb;
+    padding: 7%;
+    border-radius: 10px;
+}
+
+
 #download-btn:disabled {
     background-color: #888;
 }
-/* Progress bar styles */
-#progress-container {
-    display: none;
-    margin: 20px 0;
-    width: 100%;
-    background-color: #f3f3f3;
-    border-radius: 25px;
+.loader-wrapper {
+    position: relative;
+    /* width: 120px;
+    height: 120px; */
+  }
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #A479DA; /* Blue */
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    animation: spin 2s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
-#progress-bar {
-    width: 0%;
-    height: 30px;
-    background-color: #4CAF50;
-    border-radius: 25px;
-    text-align: center;
-    line-height: 30px;
-    color: white;
+
+
+#loop-count{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 110px;
+    transform: translate(-50%, -50%);
     font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+#download-btn {
+    margin-top: 20px;
+    padding: 12px 32px;
+    font-family:  "Mulish" ,Arial, sans-serif;
+    background-color: #A479DA;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
