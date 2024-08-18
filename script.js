@@ -23,7 +23,6 @@ document.getElementById('video-upload').addEventListener('change', async functio
         document.querySelector('.info-container').style.display = 'none';
         document.querySelector('.upload-input').style.display = 'none';
         document.querySelector('.space-div-2').style.display = 'none';
-        document.querySelector('.space-div-3').style.display = 'none';
         document.getElementById('loader-wrapper').hidden = false ;
         var frameCount = document.getElementById('loop-count');
 
@@ -41,8 +40,6 @@ document.getElementById('video-upload').addEventListener('change', async functio
 
         clearInterval(frameCounter);
 
-        const framesContainer = document.getElementById('frames-container');
-        framesContainer.innerHTML = ''; // Clear previous frames
 
         const files = ffmpeg.FS('readdir', '/');
         const frameFiles = files.filter(file => file.endsWith('.jpg'));
